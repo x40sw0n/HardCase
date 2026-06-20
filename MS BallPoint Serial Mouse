@@ -1,0 +1,10 @@
+The Microsoft BallPoint Mouse is a unique, clip-on trackball that uses its own dedicated protocol flags. 
+
+run and test to see if it works as expected, if not try using --bare instead of --microsoft sudo inputattach --microsoft /dev/ttyUSB0
+
+*Note: I had no success with --bare as it wasn't recognized as a valid option, so I assume it has been deprecated at least in the release I am using.
+
+Update your persistent boot script so it maps properly every time you power on the computer. 
+
+Edit /etc/rc.local and add the following:
+inputattach --microsoft /dev/ttyUSB0
